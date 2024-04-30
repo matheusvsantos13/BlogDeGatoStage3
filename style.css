@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: "Mulish", sans-serif;
+}
+
+html, body, input {
+  font-family: 'Mulish', sans-serif;
+}
+
+header {
+  width: 100%; /*herda tamanho do pai, no caso o pai é o body e vai pegar o tamanho da tela*/
+  background: #065E7C;
+}
+
+header .container {
+  width: 100%; /*herda tamanho do pai(header)*/
+  max-width: 1530px; /*limitar um tamanho pro conteúdo*/
+  margin: 0 auto; /*isso só funciona para alinhar qnd tem um valor pro witdh*/
+  padding: 1.6rem 2.8rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+header .container img {
+  border-radius: 50%;
+}
+
+.container .avatar{
+  width: 4.2rem;
+  height: 4.2rem;
+
+  object-fit: cover;
+}
+
+.container form {
+  width: 100%; /*herda tamanho do container*/
+}
+
+.container form label{
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.container form input {
+  width: 100%; /*herda tamanho do form*/
+  padding: 1rem;
+
+  background: white;
+  border: 0;
+  border-radius: .6rem;
+
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: black;
+}
+input:focus {
+   outline: none; /*qnd ficar selecionado tirar as bordas pretas */
+}
+
+main {
+  width: 100%;
+}
+
+main .container {
+  width: 100%;
+  max-width: 1530px;
+  margin: 0 auto;
+  padding: 1.6rem 2.8rem;
+
+  display: flex;
+  gap: 34px;
+}
+
+.main-container {
+  width: 54.3%; /*54.3% para ficar com 800px (tamanho no layout) */
+  display: flex;
+  flex-wrap: wrap; /* wrap faz a linha quebrar quando o elemento irmão nao cabe mais na linha, bem semelhante ao flex-direction column*/
+  gap: 3.2rem;
+}
+
+.main-container .catpic {
+width: 100%; /*100% em relação ao pai que é 800px */
+border-radius: 5px;
+}
+
+.main-container .title {
+width: 100%; /*essa div recebe width 100% para colocar os botões no final da caixa, como a caixa pai(main-container) tem 800px, essa div tbm vai ter 800px */
+display: flex;
+justify-content: space-between; /*deixa os elementos no começo e no fim, o fim é o final da caixa com 800px */
+align-items: center;
+}
+.title h1 {
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 160%; /* 38.4px */
+}
+.title .buttons button{
+border: none;
+background: none;
+}
+.title .buttons button:not(.like) {/* fiz um seletor para pegar o botao que nao tenha a classe like */
+margin-left: 12px;
+}
+
+.main-container p{
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 160%; /* 25.6px */
+}
+
+.side-bar {
+width: 26%;
+display: flex;
+flex-wrap: wrap;
+gap: 32px;
+}
+
+.side-bar h2 {
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 160%; /* 38.4px */
+}
+
+footer {
+width: 100%;
+background: #065E7C;
+height: 64px;
+}
+
+footer .container {
+  display: flex;
+  padding-top: 26px;
+  justify-content: center;
+}
+
+footer .container p {
+font-size: 1.6rem;
+color: white;
+}
